@@ -48,13 +48,15 @@ def not_found(exc: BaseException) -> Response:
 # --- Endpoint ---
 
 
-@handle_errors({
-    ValueError: bad_request,
-    ValidationError: bad_request,
-    NotFoundError: not_found,
-    ForbiddenError: lambda e: Response(403, f"Forbidden: {e}"),
-    Exception: lambda e: Response(500, f"Internal server error: {e}"),
-})
+@handle_errors(
+    {
+        ValueError: bad_request,
+        ValidationError: bad_request,
+        NotFoundError: not_found,
+        ForbiddenError: lambda e: Response(403, f"Forbidden: {e}"),
+        Exception: lambda e: Response(500, f"Internal server error: {e}"),
+    }
+)
 @spec
 def get_user(user_id: int) -> Response:
     """Look up a user by ID and return an HTTP-style response."""

@@ -62,11 +62,13 @@ def rollback_and_report(exc: BaseException) -> dict[str, str]:
 # --- Spec-decorated database operation ---
 
 
-@handle_errors({
-    IntegrityError: rollback_and_report,
-    ConnectionError: rollback_and_report,
-    DatabaseError: "log",
-})
+@handle_errors(
+    {
+        IntegrityError: rollback_and_report,
+        ConnectionError: rollback_and_report,
+        DatabaseError: "log",
+    }
+)
 @spec
 def create_user(username: str, email: str) -> dict[str, str]:
     """Create a new user in the database."""

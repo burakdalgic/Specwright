@@ -140,10 +140,14 @@ def _scan_project(
                         name=attr_name,
                         qualname=getattr(obj, "__qualname__", attr_name),
                         module=mod_name,
-                        spec_meta=spec_meta if isinstance(spec_meta, SpecMetadata) else None,
-                        test_reqs=test_reqs
-                        if isinstance(test_reqs, TestRequirements)
-                        else None,
+                        spec_meta=(
+                            spec_meta if isinstance(spec_meta, SpecMetadata) else None
+                        ),
+                        test_reqs=(
+                            test_reqs
+                            if isinstance(test_reqs, TestRequirements)
+                            else None
+                        ),
                     )
                 )
 
@@ -265,9 +269,7 @@ def new_group() -> None:
     help="Return type, e.g. 'int'. Prompted if omitted.",
 )
 @click.option("--tests/--no-tests", default=True, help="Generate test file.")
-@click.option(
-    "--output-dir", default=".", type=click.Path(), help="Output directory."
-)
+@click.option("--output-dir", default=".", type=click.Path(), help="Output directory.")
 def new_function(
     name: str,
     params: str | None,
@@ -277,7 +279,9 @@ def new_function(
 ) -> None:
     """Generate a @spec-decorated function with test file."""
     if not name.isidentifier():
-        err_console.print(f"[red]Error:[/red] '{name}' is not a valid Python identifier.")
+        err_console.print(
+            f"[red]Error:[/red] '{name}' is not a valid Python identifier."
+        )
         raise SystemExit(1)
 
     out = Path(output_dir)
@@ -366,9 +370,7 @@ def _default_value(type_str: str) -> str:
     help="Initial state (defaults to first state).",
 )
 @click.option("--tests/--no-tests", default=True, help="Generate test file.")
-@click.option(
-    "--output-dir", default=".", type=click.Path(), help="Output directory."
-)
+@click.option("--output-dir", default=".", type=click.Path(), help="Output directory.")
 def new_statemachine(
     name: str,
     states: str | None,
@@ -378,7 +380,9 @@ def new_statemachine(
 ) -> None:
     """Generate a StateMachine subclass with test file."""
     if not name.isidentifier():
-        err_console.print(f"[red]Error:[/red] '{name}' is not a valid Python identifier.")
+        err_console.print(
+            f"[red]Error:[/red] '{name}' is not a valid Python identifier."
+        )
         raise SystemExit(1)
 
     out = Path(output_dir)
@@ -389,9 +393,7 @@ def new_statemachine(
 
     # Prompt if not provided
     if states is None:
-        states = click.prompt(
-            "States (comma-separated)", default="idle,running,done"
-        )
+        states = click.prompt("States (comma-separated)", default="idle,running,done")
     state_list = [s.strip() for s in states.split(",") if s.strip()]
 
     if not state_list:
@@ -455,9 +457,7 @@ def new_statemachine(
 
 
 @main.command()
-@click.option(
-    "--path", default=".", type=click.Path(exists=True), help="Project root."
-)
+@click.option("--path", default=".", type=click.Path(exists=True), help="Project root.")
 def validate(path: str) -> None:
     """Validate specs, test coverage, and state machine definitions."""
     project = Path(path)
@@ -483,9 +483,7 @@ def validate(path: str) -> None:
         if matching:
             passed += 1
         else:
-            issues.append(
-                f"No tests found for '{fn.name}' (expected test_{fn.name}_*)"
-            )
+            issues.append(f"No tests found for '{fn.name}' (expected test_{fn.name}_*)")
 
         # Check @requires_tests coverage
         if fn.test_reqs is not None:
@@ -562,9 +560,7 @@ def validate(path: str) -> None:
 
 
 @main.command()
-@click.option(
-    "--path", default=".", type=click.Path(exists=True), help="Project root."
-)
+@click.option("--path", default=".", type=click.Path(exists=True), help="Project root.")
 @click.option("--output", default=None, type=click.Path(), help="Output file.")
 @click.option(
     "--diagram/--no-diagram",
@@ -660,7 +656,7 @@ def docs(path: str, output: str | None, diagram: bool) -> None:
 def _generate_dot(sm: ScannedStateMachine) -> list[str]:
     """Generate DOT graph lines for a state machine."""
     lines = [f"digraph {sm.class_name} {{", "  rankdir=LR;"]
-    lines.append(f'  node [shape=circle];')
+    lines.append(f"  node [shape=circle];")
     lines.append(f'  "{sm.initial_state}" [shape=doublecircle];')
     for from_states, method, to_state in sm.transitions:
         for fs in from_states.split(", "):

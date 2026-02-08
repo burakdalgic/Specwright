@@ -19,9 +19,7 @@ class TransitionMeta:
     to_state: str
 
 
-def transition(
-    *, from_state: str | list[str], to_state: str
-) -> Callable[[F], F]:
+def transition(*, from_state: str | list[str], to_state: str) -> Callable[[F], F]:
     """Decorator that marks a method as a state transition.
 
     The decorated method will only execute when the instance's current
@@ -33,7 +31,9 @@ def transition(
         to_state: The target state after successful execution.
     """
     from_states = (
-        frozenset([from_state]) if isinstance(from_state, str) else frozenset(from_state)
+        frozenset([from_state])
+        if isinstance(from_state, str)
+        else frozenset(from_state)
     )
     meta = TransitionMeta(from_states=from_states, to_state=to_state)
 

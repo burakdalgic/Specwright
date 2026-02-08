@@ -99,8 +99,7 @@ def validate_inputs(
 
     if errors:
         raise InputValidationError(
-            f"Input validation failed for '{func.__qualname__}':\n"
-            + "\n".join(errors)
+            f"Input validation failed for '{func.__qualname__}':\n" + "\n".join(errors)
         )
 
 

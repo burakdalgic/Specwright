@@ -233,7 +233,9 @@ class TestCombinationWithSpec:
 
 class TestPluginStrictMode:
     def test_missing_tests_raises_in_strict(self) -> None:
-        _decorate(edge_cases=["empty"])  # registers: test_dummy_happy_path, test_dummy_empty
+        _decorate(
+            edge_cases=["empty"]
+        )  # registers: test_dummy_happy_path, test_dummy_empty
         items = [_make_pytest_function("test_dummy_happy_path")]
         config = _make_config("strict")
         session = MagicMock()

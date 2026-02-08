@@ -108,7 +108,15 @@ class TestNewFunction:
         with runner.isolated_filesystem():
             result = runner.invoke(
                 main,
-                ["new", "function", "calculate", "--params", "x: int", "--returns", "int"],
+                [
+                    "new",
+                    "function",
+                    "calculate",
+                    "--params",
+                    "x: int",
+                    "--returns",
+                    "int",
+                ],
             )
             assert result.exit_code == 0
             assert Path("calculate.py").exists()
@@ -120,7 +128,15 @@ class TestNewFunction:
         with runner.isolated_filesystem():
             result = runner.invoke(
                 main,
-                ["new", "function", "calculate", "--params", "x: int", "--returns", "int"],
+                [
+                    "new",
+                    "function",
+                    "calculate",
+                    "--params",
+                    "x: int",
+                    "--returns",
+                    "int",
+                ],
             )
             assert result.exit_code == 0
             assert Path("test_calculate.py").exists()
@@ -132,9 +148,13 @@ class TestNewFunction:
             result = runner.invoke(
                 main,
                 [
-                    "new", "function", "greet",
-                    "--params", "name: str, excited: bool",
-                    "--returns", "str",
+                    "new",
+                    "function",
+                    "greet",
+                    "--params",
+                    "name: str, excited: bool",
+                    "--returns",
+                    "str",
                 ],
             )
             assert result.exit_code == 0
@@ -146,7 +166,16 @@ class TestNewFunction:
         with runner.isolated_filesystem():
             result = runner.invoke(
                 main,
-                ["new", "function", "calc", "--params", "x: int", "--returns", "int", "--no-tests"],
+                [
+                    "new",
+                    "function",
+                    "calc",
+                    "--params",
+                    "x: int",
+                    "--returns",
+                    "int",
+                    "--no-tests",
+                ],
             )
             assert result.exit_code == 0
             assert Path("calc.py").exists()
@@ -162,7 +191,15 @@ class TestNewFunction:
             Path("calculate.py").write_text("# existing")
             result = runner.invoke(
                 main,
-                ["new", "function", "calculate", "--params", "x: int", "--returns", "int"],
+                [
+                    "new",
+                    "function",
+                    "calculate",
+                    "--params",
+                    "x: int",
+                    "--returns",
+                    "int",
+                ],
             )
             assert result.exit_code != 0
 
@@ -200,7 +237,13 @@ class TestNewStateMachine:
         with runner.isolated_filesystem():
             result = runner.invoke(
                 main,
-                ["new", "statemachine", "order_processor", "--states", "pending,paid,shipped"],
+                [
+                    "new",
+                    "statemachine",
+                    "order_processor",
+                    "--states",
+                    "pending,paid,shipped",
+                ],
             )
             assert result.exit_code == 0
             assert Path("order_processor.py").exists()
@@ -224,7 +267,15 @@ class TestNewStateMachine:
         with runner.isolated_filesystem():
             result = runner.invoke(
                 main,
-                ["new", "statemachine", "machine", "--states", "off,on", "--initial", "off"],
+                [
+                    "new",
+                    "statemachine",
+                    "machine",
+                    "--states",
+                    "off,on",
+                    "--initial",
+                    "off",
+                ],
             )
             assert result.exit_code == 0
             content = Path("machine.py").read_text()

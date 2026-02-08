@@ -116,9 +116,7 @@ def spec(
     return decorator
 
 
-def _build_metadata(
-    func: Callable[..., Any], hints: dict[str, Any]
-) -> SpecMetadata:
+def _build_metadata(func: Callable[..., Any], hints: dict[str, Any]) -> SpecMetadata:
     """Build SpecMetadata from a function and its resolved type hints."""
     sig = inspect.signature(func)
     params = {name: hints[name] for name in sig.parameters if name in hints}

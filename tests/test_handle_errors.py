@@ -57,9 +57,7 @@ class TestLogStrategy:
         assert "Error in" in caplog.text
         assert "something broke" in caplog.text
 
-    def test_preserves_traceback_in_log(
-        self, caplog: pytest.LogCaptureFixture
-    ) -> None:
+    def test_preserves_traceback_in_log(self, caplog: pytest.LogCaptureFixture) -> None:
         @handle_errors({RuntimeError: "log"})
         def fail() -> None:
             raise RuntimeError("trace me")
@@ -71,9 +69,7 @@ class TestLogStrategy:
         assert "Traceback" in caplog.text
         assert "trace me" in caplog.text
 
-    def test_log_includes_function_name(
-        self, caplog: pytest.LogCaptureFixture
-    ) -> None:
+    def test_log_includes_function_name(self, caplog: pytest.LogCaptureFixture) -> None:
         @handle_errors({ValueError: "log"})
         def my_named_func() -> None:
             raise ValueError("err")
@@ -183,10 +179,12 @@ class TestReturnValueStrategy:
 
 class TestHandlerMatching:
     def test_first_matching_handler_wins(self) -> None:
-        @handle_errors({
-            ValueError: "first",
-            Exception: "second",
-        })
+        @handle_errors(
+            {
+                ValueError: "first",
+                Exception: "second",
+            }
+        )
         def fail() -> str:
             raise ValueError("test")
 
@@ -208,11 +206,13 @@ class TestHandlerMatching:
             fail()
 
     def test_multiple_handlers(self) -> None:
-        @handle_errors({
-            ValueError: "val_error",
-            KeyError: "key_error",
-            TypeError: "type_error",
-        })
+        @handle_errors(
+            {
+                ValueError: "val_error",
+                KeyError: "key_error",
+                TypeError: "type_error",
+            }
+        )
         def fail(exc_type: type) -> str:
             raise exc_type("boom")
 

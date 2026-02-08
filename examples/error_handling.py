@@ -15,33 +15,41 @@ from specwright import (
 
 # --- 1. Missing docstring (caught at decoration time) ---
 
+
 def demo_missing_docstring() -> None:
     """Show what happens when a @spec function has no docstring."""
     try:
+
         @spec
         def add(x: int, y: int) -> int:
             return x + y
+
     except MissingDocstringError as e:
         print(f"[MissingDocstringError] {e}\n")
 
 
 # --- 2. Missing type hints (caught at decoration time) ---
 
+
 def demo_missing_type_hints() -> None:
     """Show what happens when type hints are incomplete."""
     try:
+
         @spec
         def add(x, y) -> int:  # type: ignore[no-untyped-def]
             """Add two numbers."""
             return x + y
+
     except MissingTypeHintError as e:
         print(f"[MissingTypeHintError] {e}\n")
 
 
 # --- 3. Input validation error (caught at call time) ---
 
+
 def demo_input_validation() -> None:
     """Show what happens when wrong argument types are passed."""
+
     @spec
     def multiply(x: int, y: int) -> int:
         """Multiply two integers."""
@@ -55,8 +63,10 @@ def demo_input_validation() -> None:
 
 # --- 4. Output validation error (caught at call time) ---
 
+
 def demo_output_validation() -> None:
     """Show what happens when the return value violates the spec."""
+
     @spec
     def get_name(user_id: int) -> str:
         """Look up a user's name by ID."""
