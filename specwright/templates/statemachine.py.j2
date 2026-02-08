@@ -1,0 +1,18 @@
+"""{{ description }}"""
+
+from specwright import StateMachine, transition
+
+
+class {{ class_name }}(StateMachine):
+    """{{ docstring }}"""
+
+    states = {{ states }}
+    initial_state = "{{ initial_state }}"
+    track_history = True
+{% for t in transitions %}
+
+    @transition(from_state="{{ t.from_state }}", to_state="{{ t.to_state }}")
+    def {{ t.method }}(self) -> str:
+        """Transition from {{ t.from_state }} to {{ t.to_state }}."""
+        raise NotImplementedError("TODO: Implement {{ t.method }}")
+{% endfor %}

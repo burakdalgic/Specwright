@@ -1,0 +1,28 @@
+"""Tests for {{ class_name }}."""
+
+import pytest
+
+from {{ module_path }} import {{ class_name }}
+from specwright import InvalidTransitionError
+
+
+class Test{{ class_name }}:
+    def test_initial_state(self) -> None:
+        sm = {{ class_name }}()
+        assert sm.state == "{{ initial_state }}"
+{% for t in transitions %}
+
+    def test_{{ t.method }}(self) -> None:
+        """Test the {{ t.method }} transition."""
+        sm = {{ class_name }}()
+        # TODO: Navigate to valid source state and test
+        # sm.{{ t.method }}()
+        # assert sm.state == "{{ t.to_state }}"
+        pass
+{% endfor %}
+
+    def test_invalid_transition(self) -> None:
+        """Test that invalid transitions raise InvalidTransitionError."""
+        sm = {{ class_name }}()
+        # TODO: Attempt an invalid transition from the initial state
+        pass

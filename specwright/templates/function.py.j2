@@ -1,0 +1,14 @@
+"""{{ description }}"""
+
+from specwright import requires_tests, spec
+
+
+@requires_tests(
+    happy_path=True,
+    edge_cases={{ edge_cases }},
+    error_cases={{ error_cases }},
+)
+@spec
+def {{ name }}({{ params }}) -> {{ return_type }}:
+    """{{ docstring }}"""
+    raise NotImplementedError("TODO: Implement {{ name }}")

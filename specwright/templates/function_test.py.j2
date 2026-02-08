@@ -1,0 +1,27 @@
+"""Tests for {{ name }}."""
+
+import pytest
+
+from {{ module_path }} import {{ name }}
+
+
+class Test{{ class_name }}:
+    def test_{{ name }}_happy_path(self) -> None:
+        """Test {{ name }} with valid inputs."""
+        # TODO: Implement happy path test
+        result = {{ name }}({{ example_args }})
+        assert result is not None
+{% for case in edge_cases %}
+
+    def test_{{ name }}_{{ case }}(self) -> None:
+        """Test {{ name }} edge case: {{ case }}."""
+        # TODO: Implement edge case test
+        pass
+{% endfor %}
+{% for case in error_cases %}
+
+    def test_{{ name }}_{{ case }}(self) -> None:
+        """Test {{ name }} error case: {{ case }}."""
+        # TODO: Implement error case test
+        pass
+{% endfor %}

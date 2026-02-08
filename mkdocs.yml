@@ -1,0 +1,106 @@
+site_name: Specwright
+site_url: https://specwright.org
+site_description: "Python framework for LLM-assisted development: humans write specs, LLMs write code, framework enforces correctness."
+repo_url: https://github.com/specwright/specwright
+repo_name: specwright/specwright
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/specwright/specwright
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/specwright/
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - Installation: getting-started/installation.md
+    - Quickstart: getting-started/quickstart.md
+    - Your First Spec: getting-started/your-first-spec.md
+  - Guide:
+    - guide/index.md
+    - "@spec Decorator": guide/spec-decorator.md
+    - Error Handling: guide/error-handling.md
+    - State Machines: guide/state-machines.md
+    - Test Requirements: guide/testing-requirements.md
+    - CLI Usage: guide/cli-usage.md
+  - API Reference:
+    - api-reference/index.md
+    - Decorators: api-reference/decorators.md
+    - State Machine: api-reference/state-machine.md
+    - Exceptions: api-reference/exceptions.md
+    - CLI: api-reference/cli.md
+  - Examples:
+    - examples/index.md
+    - Basic API: examples/basic-api.md
+    - State Workflows: examples/state-workflows.md
+    - Real-World Project: examples/real-world-project.md
+  - Philosophy:
+    - philosophy/index.md
+    - Why Specwright: philosophy/why-specwright.md
+    - LLM Collaboration: philosophy/llm-collaboration.md
+    - Best Practices: philosophy/best-practices.md
+  - Contributing: contributing.md

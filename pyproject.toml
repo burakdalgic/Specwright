@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "specwright"
+version = "0.1.0"
+description = "Python framework for LLM-assisted development with runtime spec validation"
+authors = ["Burak burak@dalgic.dev"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://specwright.org"
+repository = "https://github.com/burakdalgic/specwright"
+documentation = "https://specwright.org"
+keywords = ["llm", "ai", "code-generation", "validation", "testing", "framework"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Testing",
+    "Typing :: Typed",
+]
+packages = [{include = "specwright"}]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/specwright/specwright/issues"
+"Changelog" = "https://github.com/specwright/specwright/blob/main/CHANGELOG.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.0"
+typing-extensions = "^4.0"
+click = "^8.1"
+rich = "^13.0"
+jinja2 = "^3.1"
+graphviz = {version = "^0.20", optional = true}
+
+[tool.poetry.extras]
+diagrams = ["graphviz"]
+
+[tool.poetry.scripts]
+specwright = "specwright.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+pytest-cov = "^6.0"
+black = "^24.0"
+ruff = "^0.8"
+mypy = "^1.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "^9.0"
+mkdocs-mermaid2-plugin = "^1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."pytest11"]
+specwright = "specwright.pytest_plugin"
+
+[tool.specwright]
+test_enforcement = "strict"
+test_discovery_pattern = "test_*.py"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+specwright_test_enforcement = "off"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
