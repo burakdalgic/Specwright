@@ -3,13 +3,11 @@
 from __future__ import annotations
 
 import warnings
-from types import SimpleNamespace
 from unittest.mock import MagicMock
 
 import pytest
 
 from specwright import (
-    InvalidTestNameError,
     MissingTestsError,
     TestRequirements,
     requires_tests,

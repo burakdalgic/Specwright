@@ -1,8 +1,8 @@
 site_name: Specwright
 site_url: https://specwright.org
 site_description: "Python framework for LLM-assisted development: humans write specs, LLMs write code, framework enforces correctness."
-repo_url: https://github.com/specwright/specwright
-repo_name: specwright/specwright
+repo_url: https://github.com/burakdalgic/Specwright
+repo_name: burakdalgic/Specwright
 
 theme:
   name: material
@@ -69,7 +69,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/specwright/specwright
+      link: https://github.com/burakdalgic/Specwright
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/specwright/
 

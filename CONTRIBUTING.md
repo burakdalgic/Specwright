@@ -5,7 +5,7 @@ Thanks for your interest in contributing! This guide will help you get started.
 ## Development Setup
 
 ```bash
-git clone https://github.com/specwright/specwright.git
+git clone https://github.com/burakdalgic/Specwright.git
 cd specwright
 poetry install
 ```
@@ -107,7 +107,7 @@ Then open http://localhost:8000.
 
 ## Reporting Bugs
 
-File issues at [github.com/specwright/specwright/issues](https://github.com/specwright/specwright/issues) with:
+File issues at [github.com/burakdalgic/Specwright/issues](https://github.com/burakdalgic/Specwright/issues) with:
 
 - Python version and OS
 - Specwright version (`specwright --version`)
@@ -116,4 +116,4 @@ File issues at [github.com/specwright/specwright/issues](https://github.com/spec
 
 ## Questions?
 
-Open a [discussion](https://github.com/specwright/specwright/discussions) for questions that aren't bug reports or feature requests.
+Open a [discussion](https://github.com/burakdalgic/Specwright/discussions) for questions that aren't bug reports or feature requests.

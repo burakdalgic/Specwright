@@ -54,7 +54,7 @@ specwright --version
 To work on Specwright itself:
 
 ```bash
-git clone https://github.com/specwright/specwright.git
+git clone https://github.com/burakdalgic/Specwright.git
 cd specwright
 poetry install
 poetry run pytest

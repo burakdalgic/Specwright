@@ -9,10 +9,10 @@ hide:
 
 **Humans write specs. LLMs write code. Specwright enforces correctness.**
 
-[![GitHub](https://img.shields.io/github/stars/specwright/specwright?style=social)](https://github.com/specwright/specwright)
+[![GitHub](https://img.shields.io/github/stars/burakdalgic/Specwright?style=social)](https://github.com/burakdalgic/Specwright)
 [![PyPI](https://img.shields.io/pypi/v/specwright)](https://pypi.org/project/specwright/)
 [![Python](https://img.shields.io/pypi/pyversions/specwright)](https://pypi.org/project/specwright/)
-[![License](https://img.shields.io/github/license/specwright/specwright)](https://github.com/specwright/specwright/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/burakdalgic/Specwright)](https://github.com/burakdalgic/Specwright/blob/main/LICENSE)
 
 </div>
 

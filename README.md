@@ -3,10 +3,10 @@
 [![Documentation](https://img.shields.io/badge/docs-specwright.org-blue)](https://specwright.org)
 [![PyPI](https://img.shields.io/pypi/v/specwright)](https://pypi.org/project/specwright/)
 [![Python](https://img.shields.io/pypi/pyversions/specwright)](https://pypi.org/project/specwright/)
-[![Tests](https://github.com/specwright/specwright/actions/workflows/test.yml/badge.svg)](https://github.com/specwright/specwright/actions/workflows/test.yml)
-[![Lint](https://github.com/specwright/specwright/actions/workflows/lint.yml/badge.svg)](https://github.com/specwright/specwright/actions/workflows/lint.yml)
-[![codecov](https://codecov.io/gh/specwright/specwright/branch/main/graph/badge.svg)](https://codecov.io/gh/specwright/specwright)
-[![License](https://img.shields.io/github/license/specwright/specwright)](LICENSE)
+[![Tests](https://github.com/burakdalgic/Specwright/actions/workflows/test.yml/badge.svg)](https://github.com/burakdalgic/Specwright/actions/workflows/test.yml)
+[![Lint](https://github.com/burakdalgic/Specwright/actions/workflows/lint.yml/badge.svg)](https://github.com/burakdalgic/Specwright/actions/workflows/lint.yml)
+[![codecov](https://codecov.io/gh/burakdalgic/Specwright/branch/main/graph/badge.svg)](https://codecov.io/gh/burakdalgic/Specwright)
+[![License](https://img.shields.io/github/license/burakdalgic/Specwright)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 **A specification-first framework for LLM-assisted development.**
@@ -441,6 +441,6 @@ MIT — see [LICENSE](LICENSE) for details.
 ## Links
 
 - **Documentation:** [specwright.org](https://specwright.org)
-- **Source:** [GitHub](https://github.com/specwright/specwright)
-- **Issues:** [Bug Tracker](https://github.com/specwright/specwright/issues)
+- **Source:** [GitHub](https://github.com/burakdalgic/Specwright)
+- **Issues:** [Bug Tracker](https://github.com/burakdalgic/Specwright/issues)
 - **Changelog:** [CHANGELOG.md](CHANGELOG.md)

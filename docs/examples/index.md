@@ -24,4 +24,4 @@ Working examples demonstrating Specwright features in realistic scenarios.
 
 </div>
 
-All examples are runnable. You'll find the source files in the [`examples/`](https://github.com/specwright/specwright/tree/main/examples) directory of the repository.
+All examples are runnable. You'll find the source files in the [`examples/`](https://github.com/burakdalgic/Specwright/tree/main/examples) directory of the repository.

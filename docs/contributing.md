@@ -5,7 +5,7 @@ Specwright welcomes contributions. Here's how to get started.
 ## Development Setup
 
 ```bash
-git clone https://github.com/specwright/specwright.git
+git clone https://github.com/burakdalgic/Specwright.git
 cd specwright
 poetry install
 ```
@@ -93,7 +93,7 @@ Then open `http://localhost:8000`.
 
 ## Reporting Issues
 
-File issues at [github.com/specwright/specwright/issues](https://github.com/specwright/specwright/issues).
+File issues at [github.com/burakdalgic/Specwright/issues](https://github.com/burakdalgic/Specwright/issues).
 
 Include:
 

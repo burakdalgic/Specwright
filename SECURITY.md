@@ -12,7 +12,7 @@ If you discover a security vulnerability in Specwright, please report it respons
 
 **Do not open a public issue.**
 
-Instead, email **burak@dalgic.dev** (or open a [private security advisory](https://github.com/specwright/specwright/security/advisories/new) on GitHub) with:
+Instead, email **burak@dalgic.dev** (or open a [private security advisory](https://github.com/burakdalgic/Specwright/security/advisories/new) on GitHub) with:
 
 - A description of the vulnerability
 - Steps to reproduce

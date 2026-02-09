@@ -138,7 +138,7 @@ Since the transition methods are also `@spec`-decorated, types are validated:
 
 ## Complete Source
 
-The full example is at [`examples/order_processing.py`](https://github.com/specwright/specwright/blob/main/examples/order_processing.py).
+The full example is at [`examples/order_processing.py`](https://github.com/burakdalgic/Specwright/blob/main/examples/order_processing.py).
 
 !!! tip "Why this matters for LLM-assisted development"
     The state machine definition is a **complete specification** of the workflow. An LLM can read the class and know exactly: what states exist, which transitions are valid, what arguments each transition takes, and what type it returns. There's no ambiguity about whether you can cancel a shipped order — the state machine makes it structurally impossible.

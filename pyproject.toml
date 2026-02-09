@@ -6,7 +6,7 @@ authors = ["Burak burak@dalgic.dev"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://specwright.org"
-repository = "https://github.com/burakdalgic/specwright"
+repository = "https://github.com/burakdalgic/Specwright"
 documentation = "https://specwright.org"
 keywords = ["llm", "ai", "code-generation", "validation", "testing", "framework"]
 classifiers = [
@@ -24,8 +24,8 @@ classifiers = [
 packages = [{include = "specwright"}]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/specwright/specwright/issues"
-"Changelog" = "https://github.com/specwright/specwright/blob/main/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/burakdalgic/Specwright/issues"
+"Changelog" = "https://github.com/burakdalgic/Specwright/blob/main/CHANGELOG.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"

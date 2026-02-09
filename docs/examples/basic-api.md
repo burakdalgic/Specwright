@@ -114,7 +114,7 @@ get_user(99)
 
 ## Complete Source
 
-The full example is at [`examples/api_endpoint.py`](https://github.com/specwright/specwright/blob/main/examples/api_endpoint.py).
+The full example is at [`examples/api_endpoint.py`](https://github.com/burakdalgic/Specwright/blob/main/examples/api_endpoint.py).
 
 ```python
 """API endpoint with multiple error handlers."""
