@@ -118,7 +118,7 @@ def _scan_project(
             if spec is None or spec.loader is None:
                 continue
             module = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(module)  # type: ignore[union-attr]
+            spec.loader.exec_module(module)
         except Exception as exc:
             errors.append(f"{py_file}: {exc}")
             continue
