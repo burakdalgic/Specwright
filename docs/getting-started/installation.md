@@ -10,19 +10,26 @@
 === "pip"
 
     ```bash
-    pip install specwright
+    pip install llmcraft
     ```
 
 === "Poetry"
 
     ```bash
-    poetry add specwright
+    poetry add llmcraft
     ```
 
 === "uv"
 
     ```bash
-    uv add specwright
+    uv add llmcraft
+    ```
+
+!!! note "Package name vs. import name"
+    The PyPI package name is `llmcraft`, but you import it as `specwright`:
+
+    ```python
+    from specwright import spec, handle_errors, StateMachine
     ```
 
 ## Optional Extras
@@ -32,7 +39,7 @@
 To generate Graphviz DOT diagrams for state machines:
 
 ```bash
-pip install "specwright[diagrams]"
+pip install "llmcraft[diagrams]"
 ```
 
 This adds the `graphviz` Python package. You'll also need the Graphviz system binary installed (`brew install graphviz` on macOS, `apt install graphviz` on Debian/Ubuntu).

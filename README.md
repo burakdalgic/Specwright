@@ -1,8 +1,8 @@
 # Specwright
 
 [![Documentation](https://img.shields.io/badge/docs-specwright.org-blue)](https://specwright.org)
-[![PyPI](https://img.shields.io/pypi/v/specwright)](https://pypi.org/project/specwright/)
-[![Python](https://img.shields.io/pypi/pyversions/specwright)](https://pypi.org/project/specwright/)
+[![PyPI](https://img.shields.io/pypi/v/llmcraft)](https://pypi.org/project/llmcraft/)
+[![Python](https://img.shields.io/pypi/pyversions/llmcraft)](https://pypi.org/project/llmcraft/)
 [![Tests](https://github.com/burakdalgic/Specwright/actions/workflows/test.yml/badge.svg)](https://github.com/burakdalgic/Specwright/actions/workflows/test.yml)
 [![Lint](https://github.com/burakdalgic/Specwright/actions/workflows/lint.yml/badge.svg)](https://github.com/burakdalgic/Specwright/actions/workflows/lint.yml)
 [![codecov](https://codecov.io/gh/burakdalgic/Specwright/branch/main/graph/badge.svg)](https://codecov.io/gh/burakdalgic/Specwright)
@@ -38,14 +38,16 @@ Specwright validates these at decoration time. At runtime, it checks that actual
 ## Installation
 
 ```bash
-pip install specwright
+pip install llmcraft
 ```
 
 Or with [Poetry](https://python-poetry.org/):
 
 ```bash
-poetry add specwright
+poetry add llmcraft
 ```
+
+> **Note:** The PyPI package name is `llmcraft`, but you import it as `specwright`.
 
 > Requires Python 3.11+
 
@@ -437,6 +439,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, code style, and PR
 ## License
 
 MIT — see [LICENSE](LICENSE) for details.
+
+## Why is the package called llmcraft?
+
+The project is called Specwright, but the PyPI package name `specwright` was already taken.
+We use `llmcraft` on PyPI while maintaining Specwright as our brand and import name.
 
 ## Links
 

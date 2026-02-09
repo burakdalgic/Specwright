@@ -10,8 +10,8 @@ hide:
 **Humans write specs. LLMs write code. Specwright enforces correctness.**
 
 [![GitHub](https://img.shields.io/github/stars/burakdalgic/Specwright?style=social)](https://github.com/burakdalgic/Specwright)
-[![PyPI](https://img.shields.io/pypi/v/specwright)](https://pypi.org/project/specwright/)
-[![Python](https://img.shields.io/pypi/pyversions/specwright)](https://pypi.org/project/specwright/)
+[![PyPI](https://img.shields.io/pypi/v/llmcraft)](https://pypi.org/project/llmcraft/)
+[![Python](https://img.shields.io/pypi/pyversions/llmcraft)](https://pypi.org/project/llmcraft/)
 [![License](https://img.shields.io/github/license/burakdalgic/Specwright)](https://github.com/burakdalgic/Specwright/blob/main/LICENSE)
 
 </div>
@@ -49,10 +49,10 @@ That's it. One decorator. Full type validation at runtime, docstring enforcement
 ## Install
 
 ```bash
-pip install specwright
+pip install llmcraft
 ```
 
-Requires Python 3.11+.
+The PyPI package is `llmcraft` — you import it as `specwright`. Requires Python 3.11+.
 
 ---
 

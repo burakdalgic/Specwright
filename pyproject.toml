@@ -1,25 +1,22 @@
 [tool.poetry]
-name = "specwright"
+name = "llmcraft"
 version = "0.1.0"
-description = "Python framework for LLM-assisted development with runtime spec validation"
+description = "Specwright - Python framework for LLM-assisted development with runtime spec validation"
 authors = ["Burak burak@dalgic.dev"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://specwright.org"
 repository = "https://github.com/burakdalgic/Specwright"
 documentation = "https://specwright.org"
-keywords = ["llm", "ai", "code-generation", "validation", "testing", "framework"]
+keywords = ["specwright", "llm", "ai", "code-generation", "validation", "testing", "framework"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Code Generators",
-    "Topic :: Software Development :: Testing",
-    "Typing :: Typed",
 ]
 packages = [{include = "specwright"}]
 
